@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+<body>
+  <div class="contenedor-fx">
+    <main class="principal">
+      <div class="componente-fx">
+        <img class="logo" src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="imagen">
+        <picture class="imagen">
+          <source srcset="images/hero-desktop.jpg" media="(min-width: 1280px)">
+          <source srcset="images/hero-mobile.jpg" media="(max-width: 1279px)">
+          <img src="images/hero-mobile.jpg" alt="imagen principal">
+        </picture>
+      </div>
+      <section class="company">
+        <h1 class="titulo">We're<br><span>coming<br>soon</span></h1>
+        <p class="descripcion">Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        <form action="" class="formulario" id="formulario">
+          <input class="correo correo-error" name="correo" type="text" placeholder="Email Address" autocomplete="off">
+          <button class="btn-email" aria-label="Submit"><img class="btn-flecha" src="./images/icon-arrow.svg" alt="icono de flecha"></button>
+          <img class="icono-alerta" src="./images/icon-error.svg" alt="icono de error">
+          <p class="mensaje-oculto">Please Provide a valid email</p> 
+        </form>
+        
+        
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Arturo Calva</a>.
+        </p>
+
+      </section>
+    </main>
+  </div>
+
+  <script type="text/javascript" src="./js/formulario.js"></script>
+</body>
+</html>

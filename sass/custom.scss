@@ -1,0 +1,294 @@
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+
+$dark-grayish-red: hsl(0, 6%, 24%);
+
+// Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+// Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+// background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%) 70.71%),
+// background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 70.71%),
+
+// Fonts
+$font-base: 'Josefin Sans', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-base;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.contenedor-fx {
+    background-color: black;
+
+    // background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.principal {
+    width: 23.5rem;
+    height: 50rem;
+}
+
+.componente-fx {
+    display: flex;
+    height: 5.25rem;
+    background-color: hsl(330, 100%, 100%);
+    align-items: center;
+
+    .logo {
+        width: 6.25rem;
+        height: 1.34375rem;
+        margin-left: 1.9375rem;
+          
+    }
+}
+
+.imagen {
+    display: flex;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2.0625rem;
+    padding-top: 4.125rem;
+    background-color: hsla(0, 100%, 99%, 1);
+    height: 29.125rem;
+
+    .titulo {
+        font-size: 2.4375rem;
+        color: $desaturated-red;
+        font-weight: 300; 
+        text-transform: uppercase;
+        letter-spacing: 0.6875rem;  
+        line-height: 1.07;      
+        
+        span {
+            color: $dark-grayish-red;
+            font-weight: 700;
+            // letter-spacing: 0.75rem;
+        }
+    }
+    .descripcion {
+        color: $desaturated-red;
+        font-weight: 400;
+        font-size: 0.84375rem;
+        padding-top: 1.125rem;
+        padding-bottom: 2.0625rem;
+        // padding-left: 0.3125rem;
+        // padding-right: 0.3125rem;
+        letter-spacing: 0.03125rem;
+        line-height: 1.56;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        color: $desaturated-red;
+        height: 3rem;
+        border: 1px solid $desaturated-red;
+        border-radius: 1.4375rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.5;
+
+        position: relative;
+        
+
+        .btn-email {
+            // display: block;
+            background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%);
+
+            width: 4rem;
+            border-radius: 1.4375rem;
+            border: 0px;
+            color: whitesmoke;
+            font-family: $font-base;
+            font-size: 2rem;
+            font-weight: 300;
+
+            .btn-flecha {
+                padding-top: 9px;
+            }
+        }
+
+        .correo {
+            background-color: transparent;
+            font-family: $font-base;
+            font-size: 1rem;
+            color: $desaturated-red;
+            outline: none;
+            border: 0px;
+            padding-left: 1.5rem;
+        }
+
+        .correo::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $desaturated-red;
+            opacity: 0.6; /* Firefox */
+        }
+
+        .icono-alerta {
+            position: absolute;
+            right: 4.2rem;
+            top: 0.6rem;
+            display: none;
+        }
+        .alerta {
+            display: block;
+        }
+
+        .mensaje-oculto {
+            color: $soft-red;
+            position: absolute;
+            top: 3.3rem;
+            font-size: 13px;
+            left: 1.5rem;
+            display: none;
+        }
+
+        .mensaje{
+            display: block;
+        }
+    }
+    .formulario-error {
+        border: 2px solid $soft-red;
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 1280px) {
+
+    .principal {
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 38.125rem;
+        grid-template-rows: auto 1fr;
+    }
+
+    .componente-fx {
+        position: relative;
+        top: 5rem;
+        left: 10.3125rem;
+        width: auto;     
+        height: auto;   
+        background-color: transparent;
+        .logo {
+            position: absolute;
+            width: 9.875rem;
+            height: 2rem;
+            margin-left: 0;  
+        }
+    }
+
+    .imagen {
+        width: 38.125rem;
+        height: 50rem;
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+    }
+
+    .company {
+        width: 830px;
+        max-width: 51.875rem;
+        height: 800px;
+        text-align: left;
+        padding-left: 10.3125rem;
+        padding-top: 14.5rem;
+
+        .titulo {
+            font-size: 3.9375rem;
+            letter-spacing: 1.125rem;  
+            line-height: 1.07;      
+        }
+
+        .descripcion {
+            font-size: 1rem;
+            padding-top: 1.5rem;
+            padding-bottom: 2.65rem;
+            width: 27rem;
+            // padding-left: 0.3125rem;
+            // padding-right: 0.3125rem;
+            letter-spacing: 0rem;
+            line-height: 1.7;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            color: #ddcdd0;
+            width: 27.875rem;
+            height: 3.5rem;
+            border: 1px solid #ddcdd0;
+            border-radius: 1.8rem;
+            margin-bottom: 2.5rem;
+            opacity: 1;
+            
+    
+            .btn-email {
+                width: 6.25rem;
+                border-radius: 1.8rem;
+                // background-image: 
+                // background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%, url('../images/icon-arrow.svg'));
+                // background: no-repeat;
+            }
+    
+            .correo {
+                width: 21.375rem;
+                padding-left: 2rem;
+                color: black;
+            }
+            .icono-alerta {
+                position: absolute;
+                right: 7rem;
+                top: 0.8rem;
+                display: none;
+            }
+            .alerta {
+                display: block;
+            }
+    
+            .mensaje-oculto {
+                color: $soft-red;
+                position: absolute;
+                top: 4.1rem;
+                font-size: 13px;
+                left: 2rem;
+                display: none;
+            }
+    
+            .mensaje{
+                display: block;
+            }
+        }
+        .formulario-error {
+            border: 3px solid $soft-red;
+            opacity: 1;
+        }
+
+    }
+}
+
+
+
+
+.attribution {
+    font-size: 12px; text-align: center;
+}
+.attribution a {
+    font-weight: 700;
+    color: $desaturated-red;
+    text-decoration: none;
+}

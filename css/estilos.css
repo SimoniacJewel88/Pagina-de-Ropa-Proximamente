@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.contenedor-fx {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.principal {
+  width: 23.5rem;
+  height: 50rem;
+}
+
+.componente-fx {
+  display: flex;
+  height: 5.25rem;
+  background-color: white;
+  align-items: center;
+}
+.componente-fx .logo {
+  width: 6.25rem;
+  height: 1.34375rem;
+  margin-left: 1.9375rem;
+}
+
+.imagen {
+  display: flex;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2.0625rem;
+  padding-top: 4.125rem;
+  background-color: snow;
+  height: 29.125rem;
+}
+.company .titulo {
+  font-size: 2.4375rem;
+  color: #ce9797;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.6875rem;
+  line-height: 1.07;
+}
+.company .titulo span {
+  color: #413a3a;
+  font-weight: 700;
+}
+.company .descripcion {
+  color: #ce9797;
+  font-weight: 400;
+  font-size: 0.84375rem;
+  padding-top: 1.125rem;
+  padding-bottom: 2.0625rem;
+  letter-spacing: 0.03125rem;
+  line-height: 1.56;
+}
+.company .formulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ce9797;
+  height: 3rem;
+  border: 1px solid #ce9797;
+  border-radius: 1.4375rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.5;
+  position: relative;
+}
+.company .formulario .btn-email {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c 100%);
+  width: 4rem;
+  border-radius: 1.4375rem;
+  border: 0px;
+  color: whitesmoke;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.company .formulario .btn-email .btn-flecha {
+  padding-top: 9px;
+}
+.company .formulario .correo {
+  background-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  color: #ce9797;
+  outline: none;
+  border: 0px;
+  padding-left: 1.5rem;
+}
+.company .formulario .correo::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ce9797;
+  opacity: 0.6;
+  /* Firefox */
+}
+.company .formulario .icono-alerta {
+  position: absolute;
+  right: 4.2rem;
+  top: 0.6rem;
+  display: none;
+}
+.company .formulario .alerta {
+  display: block;
+}
+.company .formulario .mensaje-oculto {
+  color: #f96262;
+  position: absolute;
+  top: 3.3rem;
+  font-size: 13px;
+  left: 1.5rem;
+  display: none;
+}
+.company .formulario .mensaje {
+  display: block;
+}
+.company .formulario-error {
+  border: 2px solid #f96262;
+  opacity: 1;
+}
+
+@media (min-width: 1280px) {
+  .principal {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 38.125rem;
+    grid-template-rows: auto 1fr;
+  }
+
+  .componente-fx {
+    position: relative;
+    top: 5rem;
+    left: 10.3125rem;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+  .componente-fx .logo {
+    position: absolute;
+    width: 9.875rem;
+    height: 2rem;
+    margin-left: 0;
+  }
+
+  .imagen {
+    width: 38.125rem;
+    height: 50rem;
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+
+  .company {
+    width: 830px;
+    max-width: 51.875rem;
+    height: 800px;
+    text-align: left;
+    padding-left: 10.3125rem;
+    padding-top: 14.5rem;
+  }
+  .company .titulo {
+    font-size: 3.9375rem;
+    letter-spacing: 1.125rem;
+    line-height: 1.07;
+  }
+  .company .descripcion {
+    font-size: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.65rem;
+    width: 27rem;
+    letter-spacing: 0rem;
+    line-height: 1.7;
+  }
+  .company .formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #ddcdd0;
+    width: 27.875rem;
+    height: 3.5rem;
+    border: 1px solid #ddcdd0;
+    border-radius: 1.8rem;
+    margin-bottom: 2.5rem;
+    opacity: 1;
+  }
+  .company .formulario .btn-email {
+    width: 6.25rem;
+    border-radius: 1.8rem;
+  }
+  .company .formulario .correo {
+    width: 21.375rem;
+    padding-left: 2rem;
+    color: black;
+  }
+  .company .formulario .icono-alerta {
+    position: absolute;
+    right: 7rem;
+    top: 0.8rem;
+    display: none;
+  }
+  .company .formulario .alerta {
+    display: block;
+  }
+  .company .formulario .mensaje-oculto {
+    color: #f96262;
+    position: absolute;
+    top: 4.1rem;
+    font-size: 13px;
+    left: 2rem;
+    display: none;
+  }
+  .company .formulario .mensaje {
+    display: block;
+  }
+  .company .formulario-error {
+    border: 3px solid #f96262;
+    opacity: 1;
+  }
+}
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  font-weight: 700;
+  color: #ce9797;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=estilos.css.map */
